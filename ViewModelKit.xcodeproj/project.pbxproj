@@ -7,9 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592F78121A2646C0005CFE59 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592F78111A2646C0005CFE59 /* Persistence.swift */; };
+		592F78131A2646C0005CFE59 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592F78111A2646C0005CFE59 /* Persistence.swift */; };
 		5953FB6D1A2638CE0037FFF1 /* ViewModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5953FB731A2638CE0037FFF1 /* ViewModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */; };
 		5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */; };
+		599F76661A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */; };
+		599F76671A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */; };
+		599F76681A2657D300CF17A4 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76641A2657D300CF17A4 /* ResultsViewModel.swift */; };
+		599F76691A2657D300CF17A4 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76641A2657D300CF17A4 /* ResultsViewModel.swift */; };
+		599F766A1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */; };
+		599F766B1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */; };
+		599F766E1A26581600CF17A4 /* NSEntityDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F766C1A26581600CF17A4 /* NSEntityDescription.swift */; };
+		599F766F1A26581600CF17A4 /* NSEntityDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F766C1A26581600CF17A4 /* NSEntityDescription.swift */; };
+		599F76701A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */; };
+		599F76711A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */; };
+		599F76781A265A7400CF17A4 /* ComposedResultsViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76721A265A7400CF17A4 /* ComposedResultsViewModel_Tests.swift */; };
+		599F76791A265A7400CF17A4 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76731A265A7400CF17A4 /* CoreDataTests.swift */; };
+		599F767A1A265A7400CF17A4 /* ResultsListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76741A265A7400CF17A4 /* ResultsListener.swift */; };
+		599F767B1A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76751A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift */; };
+		599F767C1A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76761A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift */; };
+		599F767D1A265A7400CF17A4 /* TestablePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76771A265A7400CF17A4 /* TestablePersistence.swift */; };
+		599F767F1A265AEA00CF17A4 /* SingleResultsViewModel_Relation_Sections_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F767E1A265AEA00CF17A4 /* SingleResultsViewModel_Relation_Sections_Tests.swift */; };
+		599F76821A265F6600CF17A4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76801A265F6600CF17A4 /* Client.swift */; };
+		599F76831A265F6600CF17A4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76811A265F6600CF17A4 /* Project.swift */; };
+		599F768C1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 599F768A1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld */; };
+		599F768D1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 599F768A1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +46,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		592F78111A2646C0005CFE59 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5953FB6B1A2638CE0037FFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelKit.h; sourceTree = "<group>"; };
 		5953FB721A2638CE0037FFF1 /* ViewModelKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5953FB781A2638CE0037FFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelKitTests.swift; sourceTree = "<group>"; };
+		599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedResultsViewModel.swift; sourceTree = "<group>"; };
+		599F76641A2657D300CF17A4 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResultsViewModel.swift; sourceTree = "<group>"; };
+		599F766C1A26581600CF17A4 /* NSEntityDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEntityDescription.swift; sourceTree = "<group>"; };
+		599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsController.swift; sourceTree = "<group>"; };
+		599F76721A265A7400CF17A4 /* ComposedResultsViewModel_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedResultsViewModel_Tests.swift; sourceTree = "<group>"; };
+		599F76731A265A7400CF17A4 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		599F76741A265A7400CF17A4 /* ResultsListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsListener.swift; sourceTree = "<group>"; };
+		599F76751A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResultsViewModel_Tests.swift; sourceTree = "<group>"; };
+		599F76761A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResultsViewModel_UseSections_Tests.swift; sourceTree = "<group>"; };
+		599F76771A265A7400CF17A4 /* TestablePersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestablePersistence.swift; sourceTree = "<group>"; };
+		599F767E1A265AEA00CF17A4 /* SingleResultsViewModel_Relation_Sections_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResultsViewModel_Relation_Sections_Tests.swift; sourceTree = "<group>"; };
+		599F76801A265F6600CF17A4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		599F76811A265F6600CF17A4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		599F768B1A2664D800CF17A4 /* ViewModelKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViewModelKit.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +110,12 @@
 		5953FB691A2638CE0037FFF1 /* ViewModelKit */ = {
 			isa = PBXGroup;
 			children = (
+				599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */,
+				599F76641A2657D300CF17A4 /* ResultsViewModel.swift */,
+				599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */,
+				592F78111A2646C0005CFE59 /* Persistence.swift */,
+				599F766C1A26581600CF17A4 /* NSEntityDescription.swift */,
+				599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */,
 				5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */,
 				5953FB6A1A2638CE0037FFF1 /* Supporting Files */,
 			);
@@ -80,6 +125,7 @@
 		5953FB6A1A2638CE0037FFF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				599F768A1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld */,
 				5953FB6B1A2638CE0037FFF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -88,7 +134,16 @@
 		5953FB761A2638CE0037FFF1 /* ViewModelKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				599F76721A265A7400CF17A4 /* ComposedResultsViewModel_Tests.swift */,
+				599F767E1A265AEA00CF17A4 /* SingleResultsViewModel_Relation_Sections_Tests.swift */,
+				599F76731A265A7400CF17A4 /* CoreDataTests.swift */,
+				599F76741A265A7400CF17A4 /* ResultsListener.swift */,
+				599F76751A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift */,
+				599F76761A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift */,
+				599F76771A265A7400CF17A4 /* TestablePersistence.swift */,
 				5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */,
+				599F76801A265F6600CF17A4 /* Client.swift */,
+				599F76811A265F6600CF17A4 /* Project.swift */,
 				5953FB771A2638CE0037FFF1 /* Supporting Files */,
 			);
 			path = ViewModelKitTests;
@@ -209,6 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599F76701A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */,
+				599F76681A2657D300CF17A4 /* ResultsViewModel.swift in Sources */,
+				592F78121A2646C0005CFE59 /* Persistence.swift in Sources */,
+				599F76661A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */,
+				599F766A1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */,
+				599F768C1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */,
+				599F766E1A26581600CF17A4 /* NSEntityDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +278,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599F766F1A26581600CF17A4 /* NSEntityDescription.swift in Sources */,
+				599F767F1A265AEA00CF17A4 /* SingleResultsViewModel_Relation_Sections_Tests.swift in Sources */,
+				599F76781A265A7400CF17A4 /* ComposedResultsViewModel_Tests.swift in Sources */,
+				599F76671A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */,
+				599F767C1A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift in Sources */,
+				599F768D1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */,
 				5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */,
+				592F78131A2646C0005CFE59 /* Persistence.swift in Sources */,
+				599F767B1A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift in Sources */,
+				599F76821A265F6600CF17A4 /* Client.swift in Sources */,
+				599F76691A2657D300CF17A4 /* ResultsViewModel.swift in Sources */,
+				599F767A1A265A7400CF17A4 /* ResultsListener.swift in Sources */,
+				599F766B1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */,
+				599F76711A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */,
+				599F76791A265A7400CF17A4 /* CoreDataTests.swift in Sources */,
+				599F767D1A265A7400CF17A4 /* TestablePersistence.swift in Sources */,
+				599F76831A265F6600CF17A4 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +397,7 @@
 		5953FB7E1A2638CE0037FFF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +407,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5953FB7F1A2638CE0037FFF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -395,6 +476,7 @@
 				5953FB7F1A2638CE0037FFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5953FB801A2638CE0037FFF1 /* Build configuration list for PBXNativeTarget "ViewModelKitTests" */ = {
 			isa = XCConfigurationList;
@@ -403,8 +485,22 @@
 				5953FB821A2638CE0037FFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		599F768A1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				599F768B1A2664D800CF17A4 /* ViewModelKit.xcdatamodel */,
+			);
+			currentVersion = 599F768B1A2664D800CF17A4 /* ViewModelKit.xcdatamodel */;
+			path = ViewModelKit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5953FB5E1A2638CE0037FFF1 /* Project object */;
 }
