@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5953FB661A2638CE0037FFF1"
-               BuildableName = "ViewModelKit.framework"
-               BlueprintName = "ViewModelKit"
-               ReferencedContainer = "container:ViewModelKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -43,7 +29,7 @@
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
-            skipped = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5953FB711A2638CE0037FFF1"
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5953FB661A2638CE0037FFF1"
-            BuildableName = "ViewModelKit.framework"
-            BlueprintName = "ViewModelKit"
+            BlueprintIdentifier = "5953FB711A2638CE0037FFF1"
+            BuildableName = "ViewModelKitTests.xctest"
+            BlueprintName = "ViewModelKitTests"
             ReferencedContainer = "container:ViewModelKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +61,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5953FB661A2638CE0037FFF1"
-            BuildableName = "ViewModelKit.framework"
-            BlueprintName = "ViewModelKit"
+            BlueprintIdentifier = "5953FB711A2638CE0037FFF1"
+            BuildableName = "ViewModelKitTests.xctest"
+            BlueprintName = "ViewModelKitTests"
             ReferencedContainer = "container:ViewModelKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5953FB661A2638CE0037FFF1"
-            BuildableName = "ViewModelKit.framework"
-            BlueprintName = "ViewModelKit"
+            BlueprintIdentifier = "5953FB711A2638CE0037FFF1"
+            BuildableName = "ViewModelKitTests.xctest"
+            BlueprintName = "ViewModelKitTests"
             ReferencedContainer = "container:ViewModelKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
