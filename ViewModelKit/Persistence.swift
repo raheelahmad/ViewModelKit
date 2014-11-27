@@ -62,7 +62,9 @@ public class Persistence: NSObject {
 	
 	func addStoreToCoordinator(coordinator: NSPersistentStoreCoordinator) {
 		var error: NSError?
-		let store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: &error)
+		let options = [ NSMigratePersistentStoresAutomaticallyOption: true,
+			NSInferMappingModelAutomaticallyOption: true ]
+		let store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: options, error: &error)
 		if store == nil {
 			println("Could not open store at \(storeURL): \(error)")
 		}
