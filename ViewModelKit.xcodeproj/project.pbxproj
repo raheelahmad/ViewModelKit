@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		592F78121A2646C0005CFE59 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592F78111A2646C0005CFE59 /* Persistence.swift */; };
 		592F78131A2646C0005CFE59 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592F78111A2646C0005CFE59 /* Persistence.swift */; };
+		593B221A1A2A8AFF00FA4B61 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B22191A2A8AFF00FA4B61 /* DataSource.swift */; };
+		593B221C1A2A8B2500FA4B61 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */; };
+		593B221D1A2A8B5000FA4B61 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B22191A2A8AFF00FA4B61 /* DataSource.swift */; };
+		593B221E1A2A8B5300FA4B61 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */; };
 		5953FB6D1A2638CE0037FFF1 /* ViewModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5953FB731A2638CE0037FFF1 /* ViewModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */; };
 		5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */; };
@@ -47,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		592F78111A2646C0005CFE59 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		593B22191A2A8AFF00FA4B61 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5953FB6B1A2638CE0037FFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelKit.h; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 				592F78111A2646C0005CFE59 /* Persistence.swift */,
 				599F766C1A26581600CF17A4 /* NSEntityDescription.swift */,
 				599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */,
+				593B22191A2A8AFF00FA4B61 /* DataSource.swift */,
+				593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */,
 				5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */,
 				5953FB6A1A2638CE0037FFF1 /* Supporting Files */,
 			);
@@ -270,6 +278,8 @@
 				599F76661A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */,
 				599F766A1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */,
 				599F768C1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */,
+				593B221A1A2A8AFF00FA4B61 /* DataSource.swift in Sources */,
+				593B221C1A2A8B2500FA4B61 /* TableDataSource.swift in Sources */,
 				599F766E1A26581600CF17A4 /* NSEntityDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +294,14 @@
 				599F76671A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */,
 				599F767C1A265A7400CF17A4 /* SingleResultsViewModel_UseSections_Tests.swift in Sources */,
 				599F768D1A2664D800CF17A4 /* ViewModelKit.xcdatamodeld in Sources */,
+				593B221E1A2A8B5300FA4B61 /* TableDataSource.swift in Sources */,
 				5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */,
 				592F78131A2646C0005CFE59 /* Persistence.swift in Sources */,
 				599F767B1A265A7400CF17A4 /* SingleResultsViewModel_Tests.swift in Sources */,
 				599F76821A265F6600CF17A4 /* Client.swift in Sources */,
 				599F76691A2657D300CF17A4 /* ResultsViewModel.swift in Sources */,
 				599F767A1A265A7400CF17A4 /* ResultsListener.swift in Sources */,
+				593B221D1A2A8B5000FA4B61 /* DataSource.swift in Sources */,
 				599F766B1A2657D300CF17A4 /* SingleResultsViewModel.swift in Sources */,
 				599F76711A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */,
 				599F76791A265A7400CF17A4 /* CoreDataTests.swift in Sources */,
