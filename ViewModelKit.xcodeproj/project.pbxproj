@@ -13,6 +13,8 @@
 		593B221C1A2A8B2500FA4B61 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */; };
 		593B221D1A2A8B5000FA4B61 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B22191A2A8AFF00FA4B61 /* DataSource.swift */; };
 		593B221E1A2A8B5300FA4B61 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */; };
+		593B22261A2A941600FA4B61 /* TableViewModelBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B22251A2A941600FA4B61 /* TableViewModelBinder.swift */; };
+		593B22281A2A97CD00FA4B61 /* BasicTableViewModelBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B22271A2A97CD00FA4B61 /* BasicTableViewModelBinder.swift */; };
 		5953FB6D1A2638CE0037FFF1 /* ViewModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5953FB731A2638CE0037FFF1 /* ViewModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */; };
 		5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */; };
@@ -53,6 +55,8 @@
 		592F78111A2646C0005CFE59 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		593B22191A2A8AFF00FA4B61 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		593B22251A2A941600FA4B61 /* TableViewModelBinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModelBinder.swift; sourceTree = "<group>"; };
+		593B22271A2A97CD00FA4B61 /* BasicTableViewModelBinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewModelBinder.swift; sourceTree = "<group>"; };
 		5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5953FB6B1A2638CE0037FFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModelKit.h; sourceTree = "<group>"; };
@@ -95,6 +99,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		593B22211A2A938700FA4B61 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				599F76641A2657D300CF17A4 /* ResultsViewModel.swift */,
+				599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */,
+				599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		593B22221A2A939400FA4B61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				599F766C1A26581600CF17A4 /* NSEntityDescription.swift */,
+				599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		593B22231A2A93AE00FA4B61 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				592F78111A2646C0005CFE59 /* Persistence.swift */,
+				593B22191A2A8AFF00FA4B61 /* DataSource.swift */,
+				593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
+		593B22241A2A93E300FA4B61 /* Binders */ = {
+			isa = PBXGroup;
+			children = (
+				593B22251A2A941600FA4B61 /* TableViewModelBinder.swift */,
+				593B22271A2A97CD00FA4B61 /* BasicTableViewModelBinder.swift */,
+			);
+			name = Binders;
+			sourceTree = "<group>";
+		};
 		5953FB5D1A2638CE0037FFF1 = {
 			isa = PBXGroup;
 			children = (
@@ -116,14 +158,10 @@
 		5953FB691A2638CE0037FFF1 /* ViewModelKit */ = {
 			isa = PBXGroup;
 			children = (
-				599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */,
-				599F76641A2657D300CF17A4 /* ResultsViewModel.swift */,
-				599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */,
-				592F78111A2646C0005CFE59 /* Persistence.swift */,
-				599F766C1A26581600CF17A4 /* NSEntityDescription.swift */,
-				599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */,
-				593B22191A2A8AFF00FA4B61 /* DataSource.swift */,
-				593B221B1A2A8B2500FA4B61 /* TableDataSource.swift */,
+				593B22231A2A93AE00FA4B61 /* Meta */,
+				593B22241A2A93E300FA4B61 /* Binders */,
+				593B22221A2A939400FA4B61 /* Extensions */,
+				593B22211A2A938700FA4B61 /* View Models */,
 				5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */,
 				5953FB6A1A2638CE0037FFF1 /* Supporting Files */,
 			);
@@ -272,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593B22281A2A97CD00FA4B61 /* BasicTableViewModelBinder.swift in Sources */,
 				599F76701A26581600CF17A4 /* NSFetchedResultsController.swift in Sources */,
 				599F76681A2657D300CF17A4 /* ResultsViewModel.swift in Sources */,
 				592F78121A2646C0005CFE59 /* Persistence.swift in Sources */,
@@ -281,6 +320,7 @@
 				593B221A1A2A8AFF00FA4B61 /* DataSource.swift in Sources */,
 				593B221C1A2A8B2500FA4B61 /* TableDataSource.swift in Sources */,
 				599F766E1A26581600CF17A4 /* NSEntityDescription.swift in Sources */,
+				593B22261A2A941600FA4B61 /* TableViewModelBinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

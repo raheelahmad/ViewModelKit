@@ -49,6 +49,7 @@ public protocol ResultsViewModel: NSObjectProtocol {
     func bind(forSectionChange: SectionChangeType, onChange:SectionChangeBlock)
     func unbind(forRowChangeType: RowChangeType)
     func unbind(forSectionChangeType: SectionChangeType)
+	func unbindAll()
     
     func objectAtIndexPath(NSIndexPath) -> ManagedObject?
 	func titleForSection(sectionIndex: Int) -> String?

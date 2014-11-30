@@ -120,6 +120,18 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 	public func unbind(type: SectionChangeType) {
 		onSectionChangeBlocks.removeValueForKey(type)
 	}
+	
+	public func unbindAll() {
+		let rowChangeTypes: [RowChangeType] = [ .WillChange, .DidChange, .Added, .Deleted, .Updated, .Moved ]
+        for type in rowChangeTypes {
+            unbind(type)
+        }
+		
+		let sectionChangeTypes: [SectionChangeType] = [ .Added, .Deleted ]
+        for type in sectionChangeTypes {
+            unbind(type)
+        }
+	}
     
     public var count: Int {
 		return allSections.reduce(0) { $0 + $1.numberOfObjects }

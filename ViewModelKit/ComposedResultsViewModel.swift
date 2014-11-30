@@ -105,15 +105,9 @@ extension ComposedResultsViewModel: ResultsViewModel {
 	}
 	
     public func unbindAll() {
-		let rowChangeTypes: [RowChangeType] = [ .WillChange, .DidChange, .Added, .Deleted, .Updated, .Moved ]
-        for type in rowChangeTypes {
-            unbind(type)
-        }
-		
-		let sectionChangeTypes: [SectionChangeType] = [ .Added, .Deleted ]
-        for type in sectionChangeTypes {
-            unbind(type)
-        }
+		for vm in viewModels {
+			vm.unbindAll()
+		}
     }
     
     public func objectAtIndexPath(indexPath: NSIndexPath) -> ManagedObject? {
