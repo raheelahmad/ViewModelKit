@@ -102,7 +102,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
     }
 
 	public func reload() {
-
+		load()
 	}
 	
 	public func bind(type: RowChangeType, onChange change: RowChangeBlock) {
