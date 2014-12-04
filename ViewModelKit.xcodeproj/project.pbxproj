@@ -18,6 +18,7 @@
 		5953FB6D1A2638CE0037FFF1 /* ViewModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5953FB6C1A2638CE0037FFF1 /* ViewModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5953FB731A2638CE0037FFF1 /* ViewModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5953FB671A2638CE0037FFF1 /* ViewModelKit.framework */; };
 		5953FB7A1A2638CE0037FFF1 /* ViewModelKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */; };
+		5967083E1A3021F0004BCAD6 /* ManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967083D1A3021F0004BCAD6 /* ManagedObjectContext.swift */; };
 		599F76661A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */; };
 		599F76671A2657D300CF17A4 /* ComposedResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */; };
 		599F76681A2657D300CF17A4 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599F76641A2657D300CF17A4 /* ResultsViewModel.swift */; };
@@ -63,6 +64,7 @@
 		5953FB721A2638CE0037FFF1 /* ViewModelKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5953FB781A2638CE0037FFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5953FB791A2638CE0037FFF1 /* ViewModelKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelKitTests.swift; sourceTree = "<group>"; };
+		5967083D1A3021F0004BCAD6 /* ManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContext.swift; sourceTree = "<group>"; };
 		599F76631A2657D300CF17A4 /* ComposedResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposedResultsViewModel.swift; sourceTree = "<group>"; };
 		599F76641A2657D300CF17A4 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		599F76651A2657D300CF17A4 /* SingleResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleResultsViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				599F766C1A26581600CF17A4 /* NSEntityDescription.swift */,
 				599F766D1A26581600CF17A4 /* NSFetchedResultsController.swift */,
+				5967083D1A3021F0004BCAD6 /* ManagedObjectContext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				593B221A1A2A8AFF00FA4B61 /* DataSource.swift in Sources */,
 				593B221C1A2A8B2500FA4B61 /* TableDataSource.swift in Sources */,
 				599F766E1A26581600CF17A4 /* NSEntityDescription.swift in Sources */,
+				5967083E1A3021F0004BCAD6 /* ManagedObjectContext.swift in Sources */,
 				593B22261A2A941600FA4B61 /* TableViewModelBinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

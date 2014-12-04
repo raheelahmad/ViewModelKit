@@ -110,6 +110,11 @@ extension Persistence { // MARK: URLs
 
 import CoreData
 
+public protocol HasDefault {
+	var isDefault: Bool { get }
+    class var defaultName: String { get }
+}
+
 public class ManagedObject: NSManagedObject {
 	public class var managedEntityName: String { return "" }
 	public class var sortDescriptors: [NSSortDescriptor] { return [] }
