@@ -151,6 +151,11 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
         return count
 	}
 	
+	public func objectsInSection(sectionIndex: Int) -> [ManagedObject] {
+		let section = allSections[sectionIndex]
+		return section.objects as [ManagedObject]
+	}
+	
 	public func titleForSection(sectionIndex: Int) -> String? {
 		var name: String?
 		if sectionDisplayKeyPath != nil {

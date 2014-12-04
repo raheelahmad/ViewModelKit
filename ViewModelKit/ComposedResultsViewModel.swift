@@ -54,6 +54,10 @@ extension ComposedResultsViewModel: ResultsViewModel {
 		return currentViewModel.rowsForSection(section)
 	}
 	
+	public func objectsInSection(section: Int) -> [ManagedObject] {
+		return currentViewModel.objectsInSection(section)
+	}
+	
 	public var allObjects: [ManagedObject] {
 		return currentViewModel.allObjects
 	}
