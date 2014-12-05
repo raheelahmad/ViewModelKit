@@ -110,7 +110,7 @@ extension Persistence { // MARK: URLs
 
 import CoreData
 
-public protocol HasDefault {
+@objc public protocol HasDefault {
 	var isDefault: Bool { get }
     class var defaultName: String { get }
 }
