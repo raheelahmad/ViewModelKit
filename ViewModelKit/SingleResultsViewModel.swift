@@ -145,7 +145,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 		return controller.fetchedObjects as [ManagedObject]
 	}
 	
-	public func rowsForSection(sectionIndex: Int) -> Int {
+	public func rowsCountInSection(sectionIndex: Int) -> Int {
 		let section = allSections[sectionIndex]
 		let count = section.numberOfObjects
         return count
@@ -159,7 +159,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 	public func titleForSection(sectionIndex: Int) -> String? {
 		var name: String?
 		if sectionDisplayKeyPath != nil {
-            if rowsForSection(sectionIndex) > 0 {
+            if rowsCountInSection(sectionIndex) > 0 {
                 let anObjectPath = NSIndexPath(forItem: 0, inSection: sectionIndex)
                 if let anObject = objectAtIndexPath(anObjectPath) {
                     name = anObject.valueForKeyPath(sectionDisplayKeyPath!) as? String

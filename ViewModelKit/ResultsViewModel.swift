@@ -41,7 +41,7 @@ public protocol ResultsViewModel: NSObjectProtocol {
     var count: Int { get }
 	var sectionCount: Int { get }
 	var allObjects:  [ManagedObject] { get }
-	func rowsForSection(Int) -> Int
+	func rowsCountInSection(Int) -> Int
 	func objectsInSection(Int) -> [ManagedObject]
     func load()
 	func reload()

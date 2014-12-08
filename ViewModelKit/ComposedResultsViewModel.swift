@@ -50,8 +50,8 @@ public extension ComposedResultsViewModel {
 extension ComposedResultsViewModel: ResultsViewModel {
     public var count: Int { return currentViewModel.count }
 	public var sectionCount: Int { return currentViewModel.sectionCount }
-	public func rowsForSection(section: Int) -> Int {
-		return currentViewModel.rowsForSection(section)
+    public func rowsCountInSection(section: Int) -> Int {
+		return currentViewModel.rowsCountInSection(section)
 	}
 	
 	public func objectsInSection(section: Int) -> [ManagedObject] {

@@ -107,8 +107,8 @@ class SingleResultsViewModel_UseSections_Tests: XCTestCase {
 		insertForItemsCountTests()
 		
 		XCTAssertEqual(listener.viewModel.count, 9, "Total count should be correct when there is an empty section")
-		XCTAssertEqual(listener.viewModel.rowsForSection(0), 2, "Section row count should be correct when there is an empty section")
-		XCTAssertEqual(listener.viewModel.rowsForSection(1), 7, "Section row count should be correct when there is an empty section")
+		XCTAssertEqual(listener.viewModel.rowsCountInSection(0), 2, "Section row count should be correct when there is an empty section")
+		XCTAssertEqual(listener.viewModel.rowsCountInSection(1), 7, "Section row count should be correct when there is an empty section")
 		XCTAssertEqual(listener.viewModel.sectionCount, 2, "Section count should be correct when there is an empty section")
 	}
 	
@@ -118,9 +118,9 @@ class SingleResultsViewModel_UseSections_Tests: XCTestCase {
 		insertForItemsCountTests()
 		
 		XCTAssertEqual(listener.viewModel.count, 20, "Total count should be correct when there is an empty section")
-		XCTAssertEqual(listener.viewModel.rowsForSection(0), 2, "Section row count should be correct when there is an empty section")
-		XCTAssertEqual(listener.viewModel.rowsForSection(1), 7, "Section row count should be correct when there is an empty section")
-		XCTAssertEqual(listener.viewModel.rowsForSection(2), 11, "Section row count should be correct when there is an empty section")
+		XCTAssertEqual(listener.viewModel.rowsCountInSection(0), 2, "Section row count should be correct when there is an empty section")
+		XCTAssertEqual(listener.viewModel.rowsCountInSection(1), 7, "Section row count should be correct when there is an empty section")
+		XCTAssertEqual(listener.viewModel.rowsCountInSection(2), 11, "Section row count should be correct when there is an empty section")
 		XCTAssertEqual(listener.viewModel.sectionCount, 3, "Section count should be correct when there is an empty section")
 	}
 	
