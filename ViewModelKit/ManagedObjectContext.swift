@@ -18,4 +18,11 @@ public extension NSManagedObjectContext {
         }
         return result as [ManagedObject]
     }
+	
+	public func save() {
+        var error: NSError?
+		if !save(&error) {
+			println("Error saving: \(error)")
+		}
+	}
 }
