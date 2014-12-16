@@ -13,7 +13,7 @@ import Foundation
 import CoreData
 
 public class Persistence: NSObject {
-	let modelName: String
+	public let modelName: String
 	public let mainContext: NSManagedObjectContext = {
 		let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
 		context.undoManager = nil
@@ -60,7 +60,7 @@ public class Persistence: NSObject {
 		}
 	}
 	
-	func addStoreToCoordinator(coordinator: NSPersistentStoreCoordinator) {
+	public func addStoreToCoordinator(coordinator: NSPersistentStoreCoordinator) {
 		var error: NSError?
 		let options = [ NSMigratePersistentStoresAutomaticallyOption: true,
 			NSInferMappingModelAutomaticallyOption: true ]
@@ -90,7 +90,7 @@ public class Persistence: NSObject {
 }
 
 extension Persistence { // MARK: URLs
-	var modelURL: NSURL! {
+	public var modelURL: NSURL! {
         let name = modelName
 		return NSBundle.mainBundle().URLForResource(name, withExtension: "momd")
 	}
