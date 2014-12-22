@@ -121,7 +121,12 @@ public class ManagedObject: NSManagedObject {
 	public class var sectionKeyPath: String? { return nil }
 	
 	public class func all(context: NSManagedObjectContext) -> [AnyObject]? {
+		return all(context, predicate: nil)
+	}
+	
+	public class func all(context: NSManagedObjectContext, predicate: NSPredicate?) -> [AnyObject]? {
 		let request = NSFetchRequest(entityName: managedEntityName)
+		request.predicate = predicate
 		var error: NSError?
 		let result = context.executeFetchRequest(request, error: &error)
 		if result == nil {
