@@ -31,28 +31,37 @@ public struct RowChangeInfo {
 	public let path: NSIndexPath
 	public let secondPath: NSIndexPath?
 	public let object: ManagedObject?
+	public init(path: NSIndexPath, secondPath: NSIndexPath?, object: ManagedObject?) {
+		self.path = path
+		self.secondPath = secondPath
+		self.object = object
+	}
 }
 
 public struct SectionChangeInfo {
 	public let index: Int
 }
 
-public protocol ResultsViewModel: NSObjectProtocol {
-    var count: Int { get }
+public protocol ViewModel: NSObjectProtocol {
+	var count: Int { get }
 	var sectionCount: Int { get }
-	var allObjects:  [ManagedObject] { get }
 	func rowsCountInSection(Int) -> Int
 	func objectsInSection(Int) -> [ManagedObject]
+    func objectAtIndexPath(NSIndexPath) -> ManagedObject?
+	
+    func bind(forRowChange: RowChangeType, onChange:RowChangeBlock)	
+    func bind(forSectionChange: SectionChangeType, onChange:SectionChangeBlock)
+	func unbindAll()
+}
+
+public protocol ResultsViewModel: ViewModel {
+	var allObjects:  [ManagedObject] { get }
     func load()
 	func reload()
     
-    func bind(forRowChange: RowChangeType, onChange:RowChangeBlock)
-    func bind(forSectionChange: SectionChangeType, onChange:SectionChangeBlock)
     func unbind(forRowChangeType: RowChangeType)
     func unbind(forSectionChangeType: SectionChangeType)
-	func unbindAll()
-    
-    func objectAtIndexPath(NSIndexPath) -> ManagedObject?
+	
 	func titleForSection(sectionIndex: Int) -> String?
 	
 	func deleteObjectAtIndexPath(indexPath: NSIndexPath)
