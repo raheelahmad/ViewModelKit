@@ -87,6 +87,12 @@ public class Persistence: NSObject {
 			}
 		}
 	}
+	
+	public func editingContext() -> NSManagedObjectContext {
+		let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+		context.parentContext = mainContext
+		return context
+	}
 }
 
 extension Persistence { // MARK: URLs
