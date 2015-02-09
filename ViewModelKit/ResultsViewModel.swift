@@ -48,17 +48,21 @@ public protocol ViewModel: NSObjectProtocol {
 	func rowsCountInSection(Int) -> Int
 	func objectsInSection(Int) -> [ManagedObject]
     func objectAtIndexPath(NSIndexPath) -> ManagedObject?
-	
-    func bind(forRowChange: RowChangeType, onChange:RowChangeBlock)	
-    func bind(forSectionChange: SectionChangeType, onChange:SectionChangeBlock)
-	func unbindAll()
+}
+
+public protocol Loadable: NSObjectProtocol {
+    func load()
+	func reload()
 }
 
 public protocol ResultsViewModel: ViewModel {
 	var allObjects:  [ManagedObject] { get }
     func load()
 	func reload()
-    
+	
+    func bind(forRowChange: RowChangeType, onChange:RowChangeBlock)
+    func bind(forSectionChange: SectionChangeType, onChange:SectionChangeBlock)
+	func unbindAll()
     func unbind(forRowChangeType: RowChangeType)
     func unbind(forSectionChangeType: SectionChangeType)
 	
