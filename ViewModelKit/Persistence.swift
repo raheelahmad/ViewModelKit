@@ -72,7 +72,7 @@ public class Persistence: NSObject {
 	
 	public func printStoreInfo() {
 		let model = mainContext.persistentStoreCoordinator!.managedObjectModel
-		let entities = model.entities as [NSEntityDescription]
+		let entities = model.entities as! [NSEntityDescription]
 		for entity in entities {
 			println(entity)
 		}
@@ -103,7 +103,7 @@ extension Persistence { // MARK: URLs
 	
 	var storeURL: NSURL! {
 		let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)
-		let documentURL = urls.last as NSURL
+		let documentURL = urls.last as! NSURL
 		let dbName = "\(modelName).sqlite"
 		let storeURL = documentURL.URLByAppendingPathComponent(dbName)
 		return storeURL
@@ -118,7 +118,7 @@ import CoreData
 
 @objc public protocol HasDefault {
 	var isDefault: Bool { get }
-    class var defaultName: String { get }
+    static var defaultName: String { get }
 }
 
 public class ManagedObject: NSManagedObject {

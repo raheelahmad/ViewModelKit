@@ -9,7 +9,7 @@
 import CoreData
 
 public class ComposedResultsViewModel: NSObject {
-    public var segmentCount: Int { return countElements(viewModels) }
+    public var segmentCount: Int { return viewModels.count }
     public var currentSegmentIndex: Int
     
     private var currentViewModel: ResultsViewModel { return viewModels[currentSegmentIndex] }

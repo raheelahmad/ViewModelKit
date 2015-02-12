@@ -34,7 +34,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
     private var onSectionChangeBlocks: [ SectionChangeType: SectionChangeBlock]
     
     private let controller: NSFetchedResultsController
-	private let controllerForEmptySection: NSFetchedResultsController?
+	private var controllerForEmptySection: NSFetchedResultsController?
     private let context: NSManagedObjectContext
 	
 	private let sectionDisplayKeyPath: String?
@@ -59,6 +59,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 		
 		var shouldSetNonEmptyPredicate = false
 		let sectionKeyPath = info.sectionNameKeyPath
+		var predicates: [NSPredicate] = []
 		if sectionKeyPath != nil && info.showEmptySection {
 			let request = NSFetchRequest(entityName: managedClass.managedEntityName)
 			request.sortDescriptors = info.sortDescriptors
@@ -67,6 +68,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 				managedObjectContext: context,
 				sectionNameKeyPath: nil,
 				cacheName: nil)
+			predicates.append(NSPredicate(format: "\(sectionKeyPath!) != nil", argumentArray: nil))
 		}
 		
 		onRowChangeBlocks = [:]
@@ -74,18 +76,15 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 		
 		let request = NSFetchRequest(entityName: managedClass.managedEntityName)
 		request.sortDescriptors = info.sortDescriptors
-		let sectionNameKeyPath = info.sectionNameKeyPath
-		var predicates: [NSPredicate] = []
-		if controllerForEmptySection != nil {
-			predicates.append(NSPredicate(format: "\(sectionNameKeyPath!) != nil")!)
-		}
+		
+		
 		if let predicate = info.predicate {
 			predicates.append(predicate)
 		}
 		request.predicate = NSCompoundPredicate.andPredicateWithSubpredicates(predicates)
         controller = NSFetchedResultsController(fetchRequest: request,
 			managedObjectContext: context,
-			sectionNameKeyPath: sectionNameKeyPath,
+			sectionNameKeyPath: sectionKeyPath,
 			cacheName: nil)
 		
 		sectionDisplayKeyPath = info.sectionDisplayNameKeyPath
@@ -142,7 +141,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 	}
 	
 	public var allObjects: [ManagedObject] {
-		return controller.fetchedObjects as [ManagedObject]
+		return controller.fetchedObjects as! [ManagedObject]
 	}
 	
 	public func rowsCountInSection(sectionIndex: Int) -> Int {
@@ -153,7 +152,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 	
 	public func objectsInSection(sectionIndex: Int) -> [ManagedObject] {
 		let section = allSections[sectionIndex]
-		return section.objects as [ManagedObject]
+		return section.objects as! [ManagedObject]
 	}
 	
 	public func titleForSection(sectionIndex: Int) -> String? {
@@ -177,7 +176,7 @@ public class SingleResultsViewModel: NSObject, ResultsViewModel {
 			object = controller.objectAtIndexPath(indexPath) as? ManagedObject
 		} else {
 			let emptyIndexPath = NSIndexPath(forRow: indexPath.row, inSection: 0)
-			object = controllerForEmptySection?.objectAtIndexPath(emptyIndexPath) as ManagedObject?
+			object = controllerForEmptySection?.objectAtIndexPath(emptyIndexPath) as! ManagedObject?
 		}
 		
         return object
@@ -225,26 +224,26 @@ extension SingleResultsViewModel: NSFetchedResultsControllerDelegate {
 		let info = SectionChangeInfo(index: sectionIndex)
 		notifyObserver(info, key: changeType!)
 	}
-    
-    public func controller(controller: NSFetchedResultsController, didChangeObject anObject: ManagedObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        switch type {
+	
+	public func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+		switch type {
         case .Insert:
             if let newIndexPath = newIndexPath {
-                let added = RowChangeInfo(path: newIndexPath, secondPath: nil, object: anObject)
+                let added = RowChangeInfo(path: newIndexPath, secondPath: nil, object: anObject as? ManagedObject)
                 notifyObserver([added], key: .Added)
             }
         case .Update:
             if let indexPath = indexPath {
-                let updated = RowChangeInfo(path: indexPath, secondPath: nil, object: anObject)
+                let updated = RowChangeInfo(path: indexPath, secondPath: nil, object: anObject as? ManagedObject)
                 notifyObserver([updated], key: .Updated)
             }
         case .Delete:
             if let indexPath = indexPath {
-                let deleted = RowChangeInfo(path: indexPath, secondPath: nil, object: anObject)
+                let deleted = RowChangeInfo(path: indexPath, secondPath: nil, object: anObject as? ManagedObject)
                 notifyObserver([deleted], key: .Deleted)
             }
         case .Move:
-			let moved = RowChangeInfo(path: indexPath!, secondPath: newIndexPath!, object: anObject)
+			let moved = RowChangeInfo(path: indexPath!, secondPath: newIndexPath!, object: anObject as? ManagedObject)
 			notifyObserver([moved], key: .Moved)
         }
     }

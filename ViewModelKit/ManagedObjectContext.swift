@@ -16,7 +16,7 @@ public extension NSManagedObjectContext {
             println("Error fetching: \(result)")
             result = []
         }
-        return result as [ManagedObject]
+        return result as! [ManagedObject]
     }
 	
 	public func save() {
