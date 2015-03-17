@@ -12,7 +12,7 @@ import ViewModelKit
 class Client: ManagedObject {
     override class var managedEntityName: String { return "Client" }
     
-    @NSManaged var name: String
+    @NSManaged var firstName: String
     @NSManaged var projects: [Project]
 	
 	override class var sortDescriptors: [NSSortDescriptor] { return [NSSortDescriptor(key: "name", ascending: true)] }
