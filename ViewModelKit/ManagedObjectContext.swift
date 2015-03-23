@@ -19,20 +19,26 @@ public extension NSManagedObjectContext {
         return result as! [ManagedObject]
     }
 	
-	public func save() {
-		if !hasChanges { return }
+	public func save() -> Bool {
+		if !hasChanges { return false }
 		
+		var didSave: Bool = true
         var error: NSError?
 		if !save(&error) {
+			didSave = false
 			println("Error saving: \(error)")
 		}
 		
 		if let parent = parentContext {
 			if parent.hasChanges {
 				parent.performBlockAndWait {
-					parent.save()
+					if !parent.save() {
+						didSave = false
+					}
 				}
 			}
 		}
+		
+		return didSave
 	}
 }
